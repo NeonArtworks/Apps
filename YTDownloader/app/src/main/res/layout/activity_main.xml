@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="at.neonartworks.ytdownloader.MainActivity"
+    app:layout_collapseParallaxMultiplier="1.0"
+    android:fitsSystemWindows="true"
+    app:layout_scrollFlags="scroll"
+    android:background="@color/brown">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_dark"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:theme="@style/AppTheme"
+        android:layout_weight="2.86" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="634dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="641dp"
+            android:weightSum="1">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_weight="0.05"
+                style="@style/AppTheme" />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_unit_id"
+                android:layout_weight="0.19">
+            </com.google.android.gms.ads.AdView>
+
+            <TextView
+                android:text="URL: "
+                android:layout_width="183dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/_tx_help" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/_link"
+                android:hint="URL"
+                android:layout_row="1"
+                android:layout_column="0"
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="41dp" />
+
+            <TextView
+                android:text="Format: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/_tx_format" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:id="@+id/_format" />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_unit_id"
+                android:layout_weight="0.46"></com.google.android.gms.ads.AdView>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/_credits"
+                    android:text="YTDownloader V1.0 R1 \n Author: NeonArtworks\n Website: www.neonartworks.at\n "
+                    android:fontFamily="sans-serif"
+                    android:textStyle="normal|bold"
+                    android:textAllCaps="false"
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp"
+                    android:layout_weight="1" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="68dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="@dimen/fab_margin"
+                    app:srcCompat="@drawable/dl_icon"
+                    app:backgroundTint="@android:color/holo_orange_dark"
+                    android:layout_weight="0.75" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </GridLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
